@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Forms</title>
+<include file="./Public/conn/header.html" />
+        <div id="page-wrapper">
+        <div class="graphs">
+	     <div class="xs">
+  	       <h3>Forms</h3>
+  	         <div class="tab-content">
+						<div class="tab-pane active" id="horizontal-form">
+							<form class="form-horizontal" action="__URL__/EditListDo" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">名称</label>
+									<div class="col-sm-8">
+										<input type="text" name="Lname" class="form-control1" id="focusedinput" value="{$re.Lname}">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">编号</label>
+									<div class="col-sm-8">
+										<input type="text" name="Lnum" class="form-control1" id="disabledinput" value="{$re.Lnum}">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">负责人</label>
+									<div class="col-sm-8">
+										<input type="text" name="Ladmin" class="form-control1" id="disabledinput" value="{$re.Ladmin}">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-2 control-label">展览地点</label>
+									<div class="col-sm-8">
+										<input type="text" name="Lplace" class="form-control1" id="inputPassword" value="{$re.Lplace}">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-2 control-label">展览时间</label>
+									<div class="col-sm-8">
+										<input type="text" name="Ltime" class="form-control1" id="inputPassword" value="{$re.Ltime}">
+									</div>
+								</div>															
+								
+								<!-- 类别 -->
+								<div class="form-group">
+									<label for="inputPassword" class="col-sm-2 control-label">类别</label>
+									<div class="col-sm-8">
+										<input type="text" name="Ltype" class="form-control1" id="inputPassword" value="{$re.Ltype}">
+									</div>
+								</div>	
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">视频</label>
+									<div class="col-sm-8">
+										<input type="text" name="Lvideo" class="form-control1" id="disabledinput" value="{$re.Lvideo}">
+									</div>
+								</div>		
+								<div class="form-group">
+									<label for="txtarea1" class="col-sm-2 control-label">内容简述</label>
+									<div class="col-sm-8"><textarea name="Ldi" id="txtarea1" cols="50" rows="4" class="form-control1">{$re.Ldi}</textarea></div>
+								</div>
+								<div class="form-group">
+									<label for="txtarea1" class="col-sm-2 control-label">详细描述</label>
+									<div class="col-sm-8"><textarea name="Ldis" id="txtarea1" cols="50" rows="4" class="form-control1">{$re.Ldis}</textarea></div>
+								</div>
+								
+								<div class="form-group">
+									<label for="txtarea1" class="col-sm-2 control-label">选择图片</label>
+									<div class="col-sm-8"><input type="file" name="big_img" /></div>
+								</div>
+							     
+							      <div class="panel-footer">
+									<div class="row">
+										<div class="col-sm-8 col-sm-offset-2">
+											<button class="btn-success btn">Submit</button>
+											<button class="btn-default btn">Cancel</button>
+											<button class="btn-inverse btn">Reset</button>
+										</div>
+									</div>
+								 </div>
+								
+								<input type="hidden" name="Lid" id="Lid" value="{$re.Lid}" />
+							</form>
+						</div>
+					</div>
+
+ 
+	
+  </div>
+  <div class="copy_layout">
+      <p>Copyright &copy; 2016 All rights reserved.</p>
+  </div>
+  </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<link href="__ROOT__/Public/admin/css/custom.css" rel="stylesheet">
+<!-- Metis Menu Plugin JavaScript -->
+<script src="__ROOT__/Public/admin/js/metisMenu.min.js"></script>
+<script src="__ROOT__/Public/admin/js/custom.js"></script>
+</body>
+</html>

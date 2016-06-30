@@ -1,0 +1,85 @@
+
+<include file="./Public/conn/index.html" />
+    <!-- end navbar -->
+
+
+    <!-- main container -->
+    <div class="content">
+
+        <!-- settings changer -->
+        <div class="skins-nav">
+            <!--<a href="#" class="skin first_nav selected">
+                <span class="icon"></span><span class="text">Default</span>
+            </a>
+            <a href="#" class="skin second_nav" data-file="__ROOT__/Public/index/css/skins/dark.css">
+                <span class="icon"></span><span class="text">Dark skin</span>
+            </a>-->
+        </div>
+
+        <div class="container-fluid">
+            <div id="pad-wrapper">
+                <!-- morris stacked chart -->
+                <div class="row-fluid">
+                    <h4 class="title">关注者变化表</h4>
+                    <div class="span12">
+                        <h5>时间日程</h5>
+                        <br />
+                        <div id="hero-area" style="height: 280px;"></div>
+                    </div>        
+                </div>
+                   <div></div><br><br>
+                    <div class="alert alert-info hidden-tablet ">
+                            <i class="icon-lightbulb pull-left"></i>
+                            Click above to see difference between inline and normal inputs on a form
+                        </div>       
+
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+
+
+    <!-- scripts for this page -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="__ROOT__/Public/index/js/bootstrap.min.js"></script>
+    <script src="__ROOT__/Public/index/js/jquery-ui-1.10.2.custom.min.js"></script>
+    <!-- knob -->
+    <script src="__ROOT__/Public/index/js/jquery.knob.js"></script>
+    <!-- flot charts -->
+    <script src="__ROOT__/Public/index/js/jquery.flot.js"></script>
+    <script src="__ROOT__/Public/index/js/jquery.flot.stack.js"></script>
+    <script src="__ROOT__/Public/index/js/jquery.flot.resize.js"></script>
+    <!-- morrisjs -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="__ROOT__/Public/index/js/morris.min.js"></script>
+    <!-- call all plugins -->
+    <script src="__ROOT__/Public/index/js/theme.js"></script>
+
+    <!-- build the charts -->
+    <script type="text/javascript">
+        // Morris Area Chart
+        Morris.Area({
+            element: 'hero-area',
+            data: [
+                {BMI: '2010 Q1', chldren: 24, father: 23},
+                {BMI: '2010 Q2', chldren: 27, father: 22},
+                {BMI: '2010 Q3', chldren: 49, father: 19},
+                {BMI: '2010 Q4', chldren: 37, father: 35},
+                {BMI: '2011 Q1', chldren: 68, father: 19},
+                {BMI: '2011 Q2', chldren: 56, father: 42},
+                {BMI: '2011 Q3', chldren: 48, father: 37},
+                {BMI: '2011 Q4', chldren: 15, father: 57},
+                {BMI: '2012 Q1', chldren: 76, father: 40},
+                {BMI: '2012 Q2', chldren: 84, father: 57}
+            ],
+            xkey: 'BMI',
+            ykeys: ['chldren', 'father'],
+            labels: ['男', '女'],
+            lineWidth: 2,
+            hideHover: 'auto',
+            lineColors: ["#81d5d9", "#a6e182"]
+          });
+    </script>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<include file="./Public/conn/index.html" />
+    <!-- end navbar -->
+
+	<!-- main container .wide-content is used for this layout without sidebar :)  -->
+    <div class="content wide-content">
+        <div class="container-fluid">
+            <div class="settings-wrapper" id="pad-wrapper">
+                <!-- avatar column -->
+                <div class="span2 avatar-box">
+                    <div class="personal-image">
+                        <img src="{$user['headimgurl']}" width="200px" style="margin-left:50px;" class="avatar img-circle" />
+                    </div>
+                </div>
+                <!-- edit form column -->
+                <div class="span7 personal-info">
+                <a href="__ROOT__/index.php/User/prize">
+                    <div class="alert alert-info">
+                        <i class="icon-lightbulb"></i>
+                         <strong>参与抽奖</strong> 
+                    </div>
+                    </a>
+                    <h4 class="personal-title">个人信息</h4>
+
+                    <form action="" method="post">
+                        <div class="field-box">
+                            <label>姓        名:</label>
+                            <input class="span5 inline-input" type="text" value="{$user['nickname']}" name="name" />
+                        </div>
+                        <div class="field-box">
+                            <label>姓        别:</label>
+                            <input class="span5 inline-input" type="text" value="{$user['sex']}" name="sex" />
+                        </div>                        
+                        <div class="field-box">
+                            <label>年   龄:</label>
+                            <input class="span5 inline-input" type="text" value="{$user['age']}"  name="age" />
+                        </div>
+                        <div class="field-box">
+                            <label>电话:</label>
+                            <input class="span5 inline-input" type="text" value="{$user['tel']}" name="tel" />
+                        </div>
+                        <div class="field-box">
+                            <label>邮件:</label>
+                            <input class="span5 inline-input" type="text" value="{$user['email']}" name="email" />
+                        </div>
+                        <div class="field-box">
+                            <label>地区:</label>                            
+                                 <input class="span5 inline-input" type="text" value="{$user['province']}" name="adds" />
+                        </div>
+                        <div class="span6 field-box actions">
+                            <input type="submit" class="btn-glow primary" value="保存修改" />
+                            <span>OR</span>
+                            <a href="__ROOT__/index.php/Index/AllList"><input type="button" class="btn-glow primary" value="返回" class="reset" /></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end main container -->
+	<!-- scripts -->
+    <script src="__ROOT__/Public/index/js/bootstrap.min.js"></script>
+    <script src="__ROOT__/Public/index/js/theme.js"></script>
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+
+
+<include file="./Public/conn/header.html" />
+           
+        
+        <div id="page-wrapper">
+        <div class="graphs">	  
+    <div class="content_bottom">
+     <div class="col-md-12 span_3">
+		  <div class="bs-example1" data-example-id="contextual-table">
+		  	<h3 style="text-align: center;">微信关注者列表</h3>
+		    <table class="table">
+		      <thead>
+		        <tr>
+		          <th>姓名</th>
+		          <th>性别</th>
+		          <th>省份</th>
+		          <th>头像</th>
+		          <th>时间</th> 
+		          <th>中奖</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		      <?php 
+		      		$i = 1;
+		      	?>
+		      <foreach name="user" item='v'>
+		      
+		      	<?php 
+		      		if(($i%2)==1){
+						echo "<tr class='active'>";
+					}else{
+						echo "<tr class='info'>";
+					}
+		      	?>
+		          <th scope="row">{$v.nickname}</th>
+		          <td>
+		              <?php if($v['sex']==1){echo "男";}else{echo "女";} ?>
+		          </td>
+		          <td>{$v.province}</td>
+		          <td><img src="{$v.headimgurl}" width="80px" height="80px"/></td>
+		          <td>
+		          		<?php echo  date('Y-m-d H:i:s', $v['subscribe_time']); ?>
+		          </td>
+		          
+		          <td>{$v.prize}</td>
+		        </tr>
+		      	<?php $i++ ;?>
+		       </foreach>		      
+		      </tbody>
+		    </table>
+		   </div>
+	   </div>
+		<div class="clearfix"> </div>
+	    </div>
+		<div class="copy">
+            <p>Copyright &copy; 2016  All rights reserved.</p>
+	    </div>
+		</div>
+       </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</body>
+</html>
